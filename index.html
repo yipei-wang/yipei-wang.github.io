@@ -48,12 +48,28 @@
         }
         .publication {
             margin-bottom: 20px;
+            display: flex;
+            align-items: baseline;
         }
-        .publication p {
+        .conference {
+            font-family: monospace;
+            width: 150px;
+            text-align: right;
+            margin-right: 1.5em;
+            flex-shrink: 0;
+        }
+        .publication-content {
+            flex-grow: 1;
+        }
+        .publication-content p {
+            margin-top: 0;
             margin-bottom: 5px;
         }
         .publication strong {
             color: #2980b9;
+        }
+        .publication-links {
+            margin-top: 5px;
         }
         .publication-links a {
             margin-right: 10px;
@@ -75,6 +91,14 @@
             p, li {
                 font-size: 14px;
             }
+            .publication {
+                flex-direction: column;
+            }
+            .conference {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -86,7 +110,7 @@
 
     <section>
         <h2>About Me</h2>
-        <p>I am currently a fourth-year Ph.D. candidate in the Elmore Family School of Electrical and Computer Engineering at <a href="https://www.purdue.edu/">Purdue University</a>, advised by Dr. <a href="https://engineering.purdue.edu/~joywang/">Xiaoqian Wang</a>. Before coming to Purdue, I acquired an M.A. in Mathematics at <a href="https://www.wisc.edu/">University of Wisconsin-Madison</a>. Prior to that, I obtained my B.S. in Computational Mathematics at <a href="https://www.nju.edu.cn/en/">Nanjing University</a>.</p>
+        <p>I am currently a fifth-year Ph.D. candidate in the Elmore Family School of Electrical and Computer Engineering at <a href="https://www.purdue.edu/">Purdue University</a>, advised by Dr. <a href="https://engineering.purdue.edu/~joywang/">Xiaoqian Wang</a>. Before coming to Purdue, I acquired an M.A. in Mathematics at <a href="https://www.wisc.edu/">University of Wisconsin-Madison</a>. Prior to that, I obtained my B.S. in Computational Mathematics at <a href="https://www.nju.edu.cn/en/">Nanjing University</a>.</p>
         <p>My research focuses on building trustworthy machine learning systems. I work on developing reliable ML models, with an emphasis on rigorous evaluations of Explainable AI methods and their real-world applications. Recently, I have also been investigating robustness issues arising from natural distribution shifts, such as spurious correlations, and their relationship to adversarial robustness. Beyond these areas, I maintain broad interests in tackling challenges across various domains of machine learning.</p>
     </section>
 
@@ -101,56 +125,92 @@
 
     <section>
         <h2>Publications</h2>
-        <ul>
+        <ul style="list-style-type: none; padding: 0;">
             <li class="publication">
-                <p><strong>Wang, Y.</strong> & Wang, X. (2024) Benchmarking deletion metrics with the principled explanations. In The 41st International Conference on Machine Learning. (ICML 2024)</p>
-                <div class="publication-links">
-                    <a href="https://openreview.net/pdf?id=SKPhvzxO1g" target="_blank">[PDF]</a>
-                    <a href="https://github.com/yipei-wang/TRACE" target="_blank">[code]</a>
+                <span class="conference">[ICML 2024]</span>
+                <div class="publication-content">
+                    <p><strong>Wang, Y.</strong> & Wang, X. (2024) Benchmarking deletion metrics with the principled explanations. In The 41st International Conference on Machine Learning.</p>
+                    <div class="publication-links">
+                        <a href="https://openreview.net/pdf?id=SKPhvzxO1g" target="_blank">[PDF]</a>
+                        <a href="https://github.com/yipei-wang/TRACE" target="_blank">[code]</a>
+                    </div>
                 </div>
             </li>
             <li class="publication">
-                <p><strong>Wang, Y.</strong> & Wang, X. (2024). On the effect of key factors in spurious correlation: a theoretical perspective. In International Conference on Artificial Intelligence and Statistics (pp. 3745-3753). PMLR. (AISTATS 2024)</p>
-                <div class="publication-links">
-                    <a href="https://proceedings.mlr.press/v238/wang24j/wang24j.pdf" target="_blank">[PDF]</a>
-                    <a href="https://github.com/yipei-wang/spurious_feature_mahalanobis" target="_blank">[code]</a>
+                <span class="conference">[AISTATS 2024]</span>
+                <div class="publication-content">
+                    <p><strong>Wang, Y.</strong> & Wang, X. (2024). On the effect of key factors in spurious correlation: a theoretical perspective. In International Conference on Artificial Intelligence and Statistics (pp. 3745-3753). PMLR.</p>
+                    <div class="publication-links">
+                        <a href="https://proceedings.mlr.press/v238/wang24j/wang24j.pdf" target="_blank">[PDF]</a>
+                        <a href="https://github.com/yipei-wang/spurious_feature_mahalanobis" target="_blank">[code]</a>
+                    </div>
                 </div>
             </li>
             <li class="publication">
-                <p>Lu, S., <strong>Wang, Y.</strong>, & Wang, X. (2024). Debiasing attention mechanism in transformer without demographics. In The 12th International Conference on Learning Representations. (ICLR 2024)</p>
-                <div class="publication-links">
-                    <a href="https://openreview.net/pdf?id=jLIUfrAcMQ" target="_blank">[PDF]</a>
-                    <a href="https://github.com/lu876/Debiasing-Attention-Mechanism-in-Transformer-without-Demographics" target="_blank">[code]</a>
+                <span class="conference">[ICLR 2024]</span>
+                <div class="publication-content">
+                    <p>Lu, S., <strong>Wang, Y.</strong>, & Wang, X. (2024). Debiasing attention mechanism in transformer without demographics. In The 12th International Conference on Learning Representations.</p>
+                    <div class="publication-links">
+                        <a href="https://openreview.net/pdf?id=jLIUfrAcMQ" target="_blank">[PDF]</a>
+                        <a href="https://github.com/lu876/Debiasing-Attention-Mechanism-in-Transformer-without-Demographics" target="_blank">[code]</a>
+                    </div>
                 </div>
             </li>
             <li class="publication">
-                <p><strong>Wang, Y.</strong>, He, B., Risacher, S., Saykin, A., Yan, J., & Wang, X. (2024) Learning the irreversible progression trajectory of Alzheimer's disease. 21st IEEE international symposium on biomedical imaging (ISBI 2024).</p>
-                <div class="publication-links">
-                    <a href="https://arxiv.org/abs/2403.06087" target="_blank">[PDF]</a>
-                    <a href="https://github.com/yipei-wang/irreversible_AD_progression" target="_blank">[code]</a>
+                <span class="conference">[ISBI 2024]</span>
+                <div class="publication-content">
+                    <p><strong>Wang, Y.</strong>, He, B., Risacher, S., Saykin, A., Yan, J., & Wang, X. (2024) Learning the irreversible progression trajectory of Alzheimer's disease. 21st IEEE international symposium on biomedical imaging.</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2403.06087" target="_blank">[PDF]</a>
+                        <a href="https://github.com/yipei-wang/irreversible_AD_progression" target="_blank">[code]</a>
+                    </div>
                 </div>
             </li>
             <li class="publication">
-                <p><strong>Wang, Y.</strong>, & Wang, X. (2022). "Why Not Other Classes?": Towards Class-Contrastive Back-Propagation Explanations. Advances in Neural Information Processing Systems, 35, 9085-9097. (NeurIPS 2022)</p>
-                <div class="publication-links">
-                    <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/3b7a66b2d1258e892c89f485b8f896e0-Paper-Conference.pdf">[PDF]</a>
-                    <a href="https://github.com/yipei-wang/ClassContrastiveExplanations" target="_blank">[code]</a>
+                <span class="conference">[NeurIPS 2022]</span>
+                <div class="publication-content">
+                    <p><strong>Wang, Y.</strong>, & Wang, X. (2022). "Why Not Other Classes?": Towards Class-Contrastive Back-Propagation Explanations. Advances in Neural Information Processing Systems, 35, 9085-9097.</p>
+                    <div class="publication-links">
+                        <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/3b7a66b2d1258e892c89f485b8f896e0-Paper-Conference.pdf">[PDF]</a>
+                        <a href="https://github.com/yipei-wang/ClassContrastiveExplanations" target="_blank">[code]</a>
+                    </div>
                 </div>
             </li>
             <li class="publication">
-                <p><strong>Wang, Y.</strong>, & Wang, X. (2021). Self-interpretable model with transformation equivariant interpretation. Advances in Neural Information Processing Systems, 34, 2359-2372. (NeurIPS 2021)</p>
-                <div class="publication-links">
-                    <a href="https://proceedings.neurips.cc/paper_files/paper/2021/file/1387a00f03b4b423e63127b08c261bdc-Paper.pdf" target="_blank">[PDF]</a>
-                    <a href="https://github.com/yipei-wang/SITE" target="_blank">[code]</a>
+                <span class="conference">[NeurIPS 2021]</span>
+                <div class="publication-content">
+                    <p><strong>Wang, Y.</strong>, & Wang, X. (2021). Self-interpretable model with transformation equivariant interpretation. Advances in Neural Information Processing Systems, 34, 2359-2372.</p>
+                    <div class="publication-links">
+                        <a href="https://proceedings.neurips.cc/paper_files/paper/2021/file/1387a00f03b4b423e63127b08c261bdc-Paper.pdf" target="_blank">[PDF]</a>
+                        <a href="https://github.com/yipei-wang/SITE" target="_blank">[code]</a>
+                    </div>
                 </div>
             </li>
             <li class="publication">
-                <p><strong>Wang, Y.</strong>, Hou, S., & Wang, X. (2021). Reinforcement learning‐based bird‐view automated vehicle control to avoid crossing traffic. Computer‐Aided Civil and Infrastructure Engineering, 36(7), 890-901.</p>
-                <div class="publication-links">
-                    <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/mice.12572" target="_blank">[PDF]</a>
+                <span class="conference">[CACAIE]</span>
+                <div class="publication-content">
+                    <p><strong>Wang, Y.</strong>, Hou, S., & Wang, X. (2021). Reinforcement learning‐based bird‐view automated vehicle control to avoid crossing traffic. Computer‐Aided Civil and Infrastructure Engineering, 36(7), 890-901.</p>
+                    <div class="publication-links">
+                        <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/mice.12572" target="_blank">[PDF]</a>
+                    </div>
                 </div>
             </li>
         </ul>
+    </section>
+    
+
+    <section>
+        <h2>Preprint</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li class="publication">
+                <span class="conference">[arXiv]</span>
+                <div class="publication-content">
+                    <p><strong>Wang, Y.</strong> & Wang, X. (2022).  A unified study of machine learning explanation evaluation metrics. arXiv preprint arXiv:2203.14265.</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/pdf/2203.14265" target="_blank">[PDF]</a>
+                    </div>
+                </div>
+            </li>
     </section>
 
     <section>
@@ -160,7 +220,7 @@
     </section>
 
     <footer>
-        <p>Last update: May 2024</p>
+        <p>Last update: Aug 2024</p>
     </footer>
 </body>
 </html>
